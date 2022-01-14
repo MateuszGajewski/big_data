@@ -62,8 +62,8 @@ object PogodaETL {
 
     val typPojazduDS = vehicles.toDS()
 
-    typPojazduDS.write.format("delta").mode("overwrite").saveAsTable("w_typ_pojazu")
+    typPojazduDS.write.format("delta").mode("overwrite").saveAsTable("w_typ_pojazdu")
 
-    println("Załadowano dane do tabeli wymiaru 'w_typ_pojazu'")
+    println("Załadowano dane do tabeli wymiaru 'w_typ_pojazdu'")
   }
 }
