@@ -84,7 +84,7 @@ object PogodaETL {
 
     val finalDataDF = allDataDF.withColumn("id_przestrzen", row_number.over(window))
 
-    finalDataDF.write.format("delta").saveAsTable("w_przestrzen")
+    finalDataDF.write.format("delta").mode("overwrite").saveAsTable("w_przestrzen")
 
     println("Załadowano dane do tabeli wymiaru 'w_przestrzen'")
   }
