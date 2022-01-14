@@ -31,7 +31,7 @@ object PogodaETL {
 
     weatherWithIndex
       .select("id_pogody", "opis_pogody")
-      .write.format("delta").saveAsTable("w_pogoda")
+      .write.format("delta").mode("overwrite").saveAsTable("w_pogoda")
 
     println("Załadowano dane do tabeli wymiaru 'w_pogoda'")
   }
