@@ -81,7 +81,7 @@ object PogodaETL {
       .withColumnRenamed("count_date", "data")
       .withColumnRenamed("hour", "godzina")
       .select("id_czas", "data", "rok", "miesiac", "godzina", "season", "dzien_tygodnia")
-      .write.format("delta").saveAsTable("w_czas")
+      .write.format("delta").mode("overwrite")..saveAsTable("w_czas")
 
     println("Załadowano dane do tabeli wymiaru 'w_czas'")
   }
