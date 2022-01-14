@@ -38,7 +38,7 @@ object PogodaETL {
     val finalDataDF = allDataDF.withColumn("id_kat_drogi", row_number.over(window))
       .select("id_kat_drogi", "kategoria_drogi", "typ_drogi")
 
-    finalDataDF.write.format("delta").saveAsTable("w_typ_drogi")
+    finalDataDF.write.format("delta").saveAsTable("w_kategoria_drogi")
 
     println("Załadowano dane do tabeli wymiaru 'w_kategoria_drogi'")
   }
