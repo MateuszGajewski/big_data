@@ -5,7 +5,7 @@ import org.apache.spark.sql.functions._
 import org.apache.spark.sql.SparkSession
 import scala.collection.mutable
 
-case class Typ_Pojazdu(id_typ: Int, typ_pojadu: String, kategoria: String, silnikowy: Boolean, dwu_kolowy: Boolean)
+case class Typ_Pojazdu(id_typ: Int, typ_pojazdu: String, kategoria: String, silnikowy: Boolean, dwu_kolowy: Boolean)
 
 object PogodaETL {
 
