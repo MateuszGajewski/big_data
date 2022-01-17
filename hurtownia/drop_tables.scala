@@ -1,0 +1,6 @@
+spark.sql("DROP TABLE IF EXISTS `w_pogoda`")
+spark.sql("DROP TABLE IF EXISTS `w_przestrzen`")
+spark.sql("DROP TABLE IF EXISTS `w_kategoria_drogi`")
+spark.sql("DROP TABLE IF EXISTS `w_czas`")
+spark.sql("DROP TABLE IF EXISTS `w_typ_pojazdu`")
+spark.sql("DROP TABLE IF EXISTS `f_fakty`")
